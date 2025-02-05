@@ -1,7 +1,8 @@
 import axios from 'axios';
 
 // הגדרת כתובת ה-API כ-bride default
-const apiUrl = "http://localhost:5129";
+const apiUrl = process.env.REACT_APP_API_URL;
+
 axios.defaults.baseURL = apiUrl; // הגדרת baseURL לכל הקריאות ב-axios
 
 // הוספת interceptor לתפוס שגיאות ולרשום ללוג
